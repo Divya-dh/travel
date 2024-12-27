@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - TravelGo</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background-image: url("IMAGES/hero-bg.jpg"); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* About Section */
+    .about-container {
+      padding: 100px 20px 50px;
+      text-align: center;
+      color: white;
+    }
+
+    .about-container h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .about-container p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .about-container .team {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .team-member {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    /* Footer Section */
+    .footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer a {
+      color: white;
+      font-size: 20px;
+      padding: 10px;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="destination-guide.html">Destination Guides</a> 
+    <a href="booking.html">Booking</a>
+    <a href="reviews.html">User Reviews</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- About Us Section -->
+  <div class="about-container">
+    <h1>About TravelGo</h1>
+    <p>Welcome to TravelGo, your ultimate travel companion. We are here to guide you on your next adventure with curated destination guides, helpful tips, and reliable booking options.</p>
+    <p>At TravelGo, we believe travel enriches lives, connects cultures, and creates memories that last a lifetime. Whether you're looking for your next getaway or seeking inspiration for your dream vacation, we're here to help make it happen!</p>
+
+    <div class="team">
+      <div class="team-member">
+        <img src="IMAGES/bec.webp" alt="Team Member">
+        <h3>Rebecca Laughlin</h3>
+        <p>Lead Travel Expert</p>
+      </div>
+      <div class="team-member">
+        <img src="IMAGES/gray.jpg" alt="Team Member">
+        <h3>Grayson Hawthorne</h3>
+        <p>CEO & Founder</p>
+      </div>
+      <div class="team-member">
+        <img src="IMAGES/thea.jpg" alt="Team Member">
+        <h3>Theadora Calligaris</h3>
+        <p>Marketing Specialist</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section with Social Media Links -->
+  <div class="footer">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+
+</body>
+</html>
