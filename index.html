@@ -19,24 +19,22 @@
       padding: 0;
     }
 
-    /* Navigation Bar */
     .navbar {
-      background-color: rgba(0, 0, 0, 0.6);
-      overflow: hidden;
-      padding: 10px 20px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
+  background-color: rgba(0, 0, 0, 0.6); /* Darker background for visibility */
+  overflow: hidden;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space out elements between start and end */
+  align-items: center; /* Vertically center the items */
+}
     .navbar a {
       color: white;
       text-align: center;
-      padding: 8px 10px;
+      padding: 8px 15px;
       text-decoration: none;
       font-size: 16px;
     }
@@ -45,6 +43,15 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
 
+    /* Mobile Menu Icon */
+    .menu-icon {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Content Section */
     .content {
       display: flex;
       flex-direction: column;
@@ -62,20 +69,21 @@
       margin-top: 20px;
     }
 
+    /* Search Bar Container */
     .search-container {
       text-align: center;
       margin-top: 30px;
       position: relative;
-      width: 80%; /* Adjusted for smaller screens */
+      width: 70%;
     }
 
     #search-bar {
       width: 100%;
-      padding: 10px;
-      font-size: 16px;
+      padding: 12px 20px;
+      font-size: 18px;
       border-radius: 4px;
       border: 1px solid #ccc;
-      padding-right: 30px;
+      box-sizing: border-box;
     }
 
     .search-icon {
@@ -88,17 +96,18 @@
 
     .results {
       margin-top: 20px;
-      width: 80%; /* Adjusted for responsiveness */
+      width: 70%;
       display: none;
     }
 
     .result-item {
-      padding: 10px;
+      padding: 12px 10px;
       border: 1px solid #ddd;
       margin: 5px 0;
       border-radius: 5px;
       background-color: rgba(255, 255, 255, 0.7);
       color: black;
+      font-size: 18px;
     }
 
     /* Footer Section */
@@ -136,15 +145,33 @@
       }
 
       .search-container {
-        width: 90%;
+        width: 80%;
       }
 
       #search-bar {
-        font-size: 14px;
+        font-size: 16px;
+        padding: 12px 18px;
       }
 
       .footer {
         font-size: 14px;
+      }
+
+      /* Show mobile menu icon */
+      .menu-icon {
+        display: block;
+      }
+
+      /* Hide navbar links initially */
+      .navbar-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      .navbar-links a {
+        display: block;
+        padding: 10px 0;
       }
     }
 
@@ -158,11 +185,12 @@
       }
 
       .search-container {
-        width: 100%;
+        width: 90%;
       }
 
       #search-bar {
-        font-size: 12px;
+        font-size: 14px;
+        padding: 12px 16px;
       }
 
       .footer a {
@@ -176,12 +204,18 @@
 
   <!-- Navigation Bar -->
   <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="destination-guide.html">Destination Guides</a> 
-    <a href="booking.html">Booking</a>
-    <a href="reviews.html">User Reviews</a>
-    <a href="contact.html">Contact</a>
+    <!-- Mobile Menu Icon -->
+    <span class="menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></span>
+
+    <!-- Navbar Links -->
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="destination-guide.html">Destination Guides</a>
+      <a href="booking.html">Booking</a>
+      <a href="reviews.html">User Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
 
   <!-- Content Section -->
@@ -218,6 +252,12 @@
   </div>
 
   <script>
+    // Toggle mobile menu visibility
+    function toggleMenu() {
+      const menu = document.querySelector('.navbar-links');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
     function searchFunction() {
       const input = document.getElementById("search-bar").value.toLowerCase();
       const results = document.querySelectorAll(".result-item");
@@ -241,4 +281,5 @@
   </script>
 </body>
 </html>
+
 
