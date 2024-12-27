@@ -15,7 +15,7 @@
     }
 
     .hero {
-      background-image: url("IMAGES/hero-bg.jpg");
+      background-image: url("../IMAGES/hero-bg.jpg"); /* Updated relative path */
       background-size: cover;
       background-position: center;
       height: 60vh;
@@ -104,6 +104,56 @@
     .view-more:hover {
       background-color: #0056b3;
     }
+
+    /* Mobile responsiveness */
+    @media screen and (max-width: 768px) {
+      .hero {
+        font-size: 1.8em;
+        padding: 40px 20px;
+      }
+
+      .destination-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .destination-card img {
+        height: 180px;
+      }
+
+      .destination-card a {
+        font-size: 1em;
+      }
+
+      .buttons button {
+        font-size: 12px;
+        padding: 8px 15px;
+      }
+    }
+
+    /* Extra small devices (portrait phones, 480px and below) */
+    @media screen and (max-width: 480px) {
+      .destination-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .destination-card img {
+        height: 150px;
+      }
+
+      .destination-card a {
+        font-size: 1em;
+      }
+
+      .buttons button {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+
+      .hero {
+        font-size: 1.5em;
+        padding: 30px 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -121,7 +171,7 @@
       
       <!-- Paris -->
       <div class="destination-card">
-        <img src="IMAGES/paris.avif" alt="Paris">
+        <img src="../IMAGES/paris.avif" alt="Paris"> <!-- Updated relative path -->
         <a href="paris.html">Paris</a>
         <div class="buttons">
           <button class="book-now" onclick="location.href='booking.html'">Book Now</button>
@@ -131,7 +181,7 @@
 
       <!-- Rome -->
       <div class="destination-card">
-        <img src="IMAGES/rome.avif" alt="Rome">
+        <img src="../IMAGES/rome.avif" alt="Rome"> <!-- Updated relative path -->
         <a href="rome.html">Rome</a>
         <div class="buttons">
           <button class="book-now" onclick="location.href='booking.html'">Book Now</button>
@@ -141,7 +191,7 @@
 
       <!-- New York -->
       <div class="destination-card">
-        <img src="IMAGES/newyork.avif" alt="New York">
+        <img src="../IMAGES/newyork.avif" alt="New York"> <!-- Updated relative path -->
         <a href="newyork.html">New York</a>
         <div class="buttons">
           <button class="book-now" onclick="location.href='booking.html'">Book Now</button>
@@ -151,7 +201,7 @@
 
       <!-- Tokyo -->
       <div class="destination-card">
-        <img src="IMAGES/tokyo.avif" alt="Tokyo">
+        <img src="../IMAGES/tokyo.avif" alt="Tokyo"> <!-- Updated relative path -->
         <a href="tokyo.html">Tokyo</a>
         <div class="buttons">
           <button class="book-now" onclick="location.href='booking.html'">Book Now</button>
@@ -161,7 +211,7 @@
 
       <!-- London -->
       <div class="destination-card">
-        <img src="IMAGES/london.avif" alt="London">
+        <img src="../IMAGES/london.avif" alt="London"> <!-- Updated relative path -->
         <a href="london.html">London</a>
         <div class="buttons">
           <button class="book-now" onclick="location.href='booking.html'">Book Now</button>
@@ -171,7 +221,7 @@
 
       <!-- Dubai -->
       <div class="destination-card">
-        <img src="IMAGES/dubai.avif" alt="Dubai">
+        <img src="../IMAGES/dubai.avif" alt="Dubai"> <!-- Updated relative path -->
         <a href="dubai.html">Dubai</a>
         <div class="buttons">
           <button class="book-now" onclick="location.href='booking.html'">Book Now</button>
@@ -181,7 +231,7 @@
 
       <!-- Sydney -->
       <div class="destination-card">
-        <img src="IMAGES/sydney.avif" alt="Sydney">
+        <img src="../IMAGES/sydney.avif" alt="Sydney"> <!-- Updated relative path -->
         <a href="sydney.html">Sydney</a>
         <div class="buttons">
           <button class="book-now" onclick="location.href='booking.html'">Book Now</button>
@@ -191,7 +241,7 @@
 
       <!-- Barcelona -->
       <div class="destination-card">
-        <img src="IMAGES/barcelona.avif" alt="Barcelona">
+        <img src="../IMAGES/barcelona.avif" alt="Barcelona"> <!-- Updated relative path -->
         <a href="barcelona.html">Barcelona</a>
         <div class="buttons">
           <button class="book-now" onclick="location.href='booking.html'">Book Now</button>
@@ -201,7 +251,7 @@
 
       <!-- Cape Town -->
       <div class="destination-card">
-        <img src="IMAGES/capetown.avif" alt="Cape Town">
+        <img src="../IMAGES/capetown.avif" alt="Cape Town"> <!-- Updated relative path -->
         <a href="capetown.html">Cape Town</a>
         <div class="buttons">
           <button class="book-now" onclick="location.href='booking.html'">Book Now</button>
@@ -211,7 +261,7 @@
 
       <!-- Bali -->
       <div class="destination-card">
-        <img src="IMAGES/bali.avif" alt="Bali">
+        <img src="../IMAGES/bali.avif" alt="Bali"> <!-- Updated relative path -->
         <a href="bali.html">Bali</a>
         <div class="buttons">
           <button class="book-now" onclick="location.href='booking.html'">Book Now</button>
@@ -220,7 +270,8 @@
       </div>
     </div>
   </div>
-<center><a href="home.html">← Back to Home</a></center>
+  <center><a href="../index.html">← Back to Home</a></center>
 </body>
 </html>
+
 

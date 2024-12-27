@@ -21,43 +21,44 @@
 
     /* Navigation Bar */
     .navbar {
-      background-color: rgba(0, 0, 0, 0.6); /* semi-transparent */
+      background-color: rgba(0, 0, 0, 0.6);
       overflow: hidden;
       padding: 10px 20px;
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 10;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .navbar a {
-      float: left;
-      display: block;
       color: white;
       text-align: center;
-      padding: 14px 16px;
+      padding: 8px 10px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
     }
 
     .navbar a:hover {
       background-color: rgba(255, 255, 255, 0.2);
     }
 
-    /* Body Layout with Flexbox for Centering */
     .content {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      padding-top: 80px; /* To offset the navbar */
+      padding-top: 80px;
       text-align: center;
     }
 
     h1 {
       font-family: "Goudy Bookletter 1911", sans-serif;
-      font-size: 100px;
+      font-size: 2.5rem;
       color: white;
       margin-top: 20px;
     }
@@ -66,18 +67,18 @@
       text-align: center;
       margin-top: 30px;
       position: relative;
+      width: 80%; /* Adjusted for smaller screens */
     }
 
     #search-bar {
-      width: 300px;
+      width: 100%;
       padding: 10px;
       font-size: 16px;
       border-radius: 4px;
       border: 1px solid #ccc;
-      padding-right: 30px; /* Add space for the icon */
+      padding-right: 30px;
     }
 
-    /* Style for the search icon */
     .search-icon {
       position: absolute;
       top: 50%;
@@ -88,10 +89,8 @@
 
     .results {
       margin-top: 20px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      display: none; /* Hide results initially */
+      width: 80%; /* Adjusted for responsiveness */
+      display: none;
     }
 
     .result-item {
@@ -126,20 +125,64 @@
       border-radius: 50%;
     }
 
+    /* Media Queries for Responsiveness */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .navbar a {
+        font-size: 14px;
+        padding: 6px;
+      }
+
+      .search-container {
+        width: 90%;
+      }
+
+      #search-bar {
+        font-size: 14px;
+      }
+
+      .footer {
+        font-size: 14px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .navbar a {
+        font-size: 12px;
+      }
+
+      .search-container {
+        width: 100%;
+      }
+
+      #search-bar {
+        font-size: 12px;
+      }
+
+      .footer a {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
-
   <div class="background-overlay"></div>
 
   <!-- Navigation Bar -->
   <div class="navbar">
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="destination-guide.html">Destination Guides</a> 
-    <a href="booking.html">Booking</a>
-    <a href="reviews.html">User Reviews</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="../travel/html/about.html">About</a>
+    <a href="../travel/html/destination-guide.html">Destination Guides</a> 
+    <a href="../travel/html/booking.html">Booking</a>
+    <a href="../travel/html/reviews.html">User Reviews</a>
+    <a href="../travel/html/contact.html">Contact</a>
   </div>
 
   <!-- Content Section -->
@@ -148,27 +191,26 @@
 
     <!-- Search Bar Section -->
     <div class="search-container">
-      <!-- Search Icon added inside the input -->
       <i class="fas fa-search search-icon"></i>
       <input type="text" id="search-bar" placeholder="Search for places..." onkeyup="searchFunction()">
     </div>
 
     <!-- Search Results -->
     <div class="results" id="results">
-      <a href="paris.html"><div class="result-item">Paris</div></a>
-      <a href="rome.html"><div class="result-item">Rome</div></a>
-      <a href="newyork.html"><div class="result-item">New York</div></a>
-      <a href="tokyo.html"><div class="result-item">Tokyo</div></a>
-      <a href="london.html"><div class="result-item">London</div></a>
-      <a href="dubai.html"><div class="result-item">Dubai</div></a>
-      <a href="sydney.html"><div class="result-item">Sydney</div></a>
-      <a href="capetown.html"><div class="result-item">Cape Town</div></a>
-      <a href="barcelona.html"><div class="result-item">Barcelona</div></a>
-      <a href="bali.html"><div class="result-item">Bali</div></a>
+      <a href="../travel/html/paris.html"><div class="result-item">Paris</div></a>
+      <a href="../travel/html/rome.html"><div class="result-item">Rome</div></a>
+      <a href="../travel/html/newyork.html"><div class="result-item">New York</div></a>
+      <a href="../travel/html/tokyo.html"><div class="result-item">Tokyo</div></a>
+      <a href="../travel/html/london.html"><div class="result-item">London</div></a>
+      <a href="../travel/html/dubai.html"><div class="result-item">Dubai</div></a>
+      <a href="../travel/html/sydney.html"><div class="result-item">Sydney</div></a>
+      <a href="../travel/html/capetown.html"><div class="result-item">Cape Town</div></a>
+      <a href="../travel/html/barcelona.html"><div class="result-item">Barcelona</div></a>
+      <a href="../travel/html/bali.html"><div class="result-item">Bali</div></a>
     </div>
   </div>
 
-  <!-- Footer Section with Social Media Links -->
+  <!-- Footer Section -->
   <div class="footer">
     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
     <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -182,7 +224,6 @@
       const results = document.querySelectorAll(".result-item");
       const resultsContainer = document.getElementById("results");
 
-      // Show results container when user starts typing
       if (input.length > 0) {
         resultsContainer.style.display = "block";
       } else {
@@ -192,15 +233,13 @@
       results.forEach(function(result) {
         const text = result.textContent.toLowerCase();
         if (text.includes(input)) {
-          result.style.display = "block"; // Show matching results
+          result.style.display = "block";
         } else {
-          result.style.display = "none"; // Hide non-matching results
+          result.style.display = "none";
         }
       });
     }
   </script>
-
-  <div style="height:1000px;"></div>
-
 </body>
 </html>
+

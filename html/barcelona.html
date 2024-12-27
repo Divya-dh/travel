@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      background-image: url("IMAGES/barcelona.avif"); 
+      background-image: url("../IMAGES/barcelona.avif"); 
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -19,7 +19,7 @@
     }
 
     .hero {
-      background-image: url("IMAGES/barcelona.avif"); 
+      background-image: url("../IMAGES/barcelona.avif"); 
       background-size: cover;
       background-position: center;
       height: 60vh;
@@ -185,6 +185,58 @@
       margin: 10px 0;
       color: black;
     }
+
+    /* Media Queries for Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 40px 20px;
+        height: 50vh;
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      .overview {
+        font-size: 1.2em;
+      }
+
+      .places-to-visit-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      .slideshow-container {
+        height: 50vh;
+      }
+
+      .itinerary-card {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        height: 40vh;
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 1.8em;
+      }
+
+      .overview {
+        font-size: 1em;
+      }
+
+      .slideshow-container {
+        height: 40vh;
+      }
+
+      .itinerary-card {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -195,12 +247,12 @@
 
   <div class="slideshow-container">
     <div class="slides">
-      <img src="IMAGES/barcelona-image1.avif" alt="Sagrada Familia">
-      <img src="IMAGES/barcelona-image2.avif" alt="Park Güell">
-      <img src="IMAGES/barcelona-image3.avif" alt="La Rambla">
-      <img src="IMAGES/barcelona-image4.avif" alt="Barceloneta Beach">
-      <img src="IMAGES/barcelona-image5.avif" alt="Camp Nou">
-      <img src="IMAGES/barcelona-image6.avif" alt="Gothic Quarter">
+      <img src="../IMAGES/barcelona-image1.avif" alt="Sagrada Familia">
+      <img src="../IMAGES/barcelona-image2.avif" alt="Park Güell">
+      <img src="../IMAGES/barcelona-image3.avif" alt="La Rambla">
+      <img src="../IMAGES/barcelona-image4.avif" alt="Barceloneta Beach">
+      <img src="../IMAGES/barcelona-image5.avif" alt="Camp Nou">
+      <img src="../IMAGES/barcelona-image6.avif" alt="Gothic Quarter">
     </div>
     <span class="arrow arrow-left" onclick="prevSlide()">&lt;</span>
     <span class="arrow arrow-right" onclick="nextSlide()">&gt;</span>

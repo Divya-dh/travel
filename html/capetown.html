@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      background-image: url("IMAGES/capetown.avif"); 
+      background-image: url("../IMAGES/capetown.avif"); 
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -19,7 +19,7 @@
     }
 
     .hero {
-      background-image: url("IMAGES/capetown.avif"); 
+      background-image: url("../IMAGES/capetown.avif"); 
       background-size: cover;
       background-position: center;
       height: 60vh;
@@ -185,6 +185,58 @@
       margin: 10px 0;
       color: black;
     }
+
+    /* Mobile responsive styles */
+    @media screen and (max-width: 768px) {
+      .hero {
+        height: 50vh;
+        font-size: 2em;
+        padding: 40px 10px;
+      }
+
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .hero p {
+        font-size: 1.2em;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      .overview {
+        padding: 15px;
+      }
+
+      .places-to-visit-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .itinerary-card {
+        width: 100%;
+        padding: 15px;
+      }
+
+      .slideshow-container {
+        height: 50vh;
+      }
+
+      .slides img {
+        height: 50vh;
+      }
+
+      .arrow {
+        font-size: 20px;
+        padding: 8px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -195,12 +247,12 @@
 
   <div class="slideshow-container">
     <div class="slides">
-      <img src="IMAGES/capetown-image1.avif" alt="Table Mountain">
-      <img src="IMAGES/capetown-image2.avif" alt="Robben Island">
-      <img src="IMAGES/capetown-image3.avif" alt="Cape Point">
-      <img src="IMAGES/capetown-image4.avif" alt="Kirstenbosch National Botanical Garden">
-      <img src="IMAGES/capetown-image5.avif" alt="Camps Bay Beach">
-      <img src="IMAGES/capetown-image6.avif" alt="Bo-Kaap">
+      <img src="../IMAGES/capetown-image1.avif" alt="Table Mountain">
+      <img src="../IMAGES/capetown-image2.avif" alt="Robben Island">
+      <img src="../IMAGES/capetown-image3.avif" alt="Cape Point">
+      <img src="../IMAGES/capetown-image4.avif" alt="Kirstenbosch National Botanical Garden">
+      <img src="../IMAGES/capetown-image5.avif" alt="Camps Bay Beach">
+      <img src="../IMAGES/capetown-image6.avif" alt="Bo-Kaap">
     </div>
     <span class="arrow arrow-left" onclick="prevSlide()">&lt;</span>
     <span class="arrow arrow-right" onclick="nextSlide()">&gt;</span>

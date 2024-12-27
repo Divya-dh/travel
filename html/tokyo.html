@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      background-image: url("IMAGES/tokyo.avif");
+      background-image: url("../IMAGES/tokyo.avif");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -20,7 +20,7 @@
 
     /* Hero Section */
     .hero {
-      background-image: url("IMAGES/tokyo.avif");
+      background-image: url("../IMAGES/tokyo.avif");
       background-size: cover;
       background-position: center;
       height: 60vh;
@@ -28,7 +28,7 @@
       text-align: center;
       padding: 60px 20px;
       font-size: 2.5em;
-      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text visibility */
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
     /* Main Content */
@@ -41,13 +41,13 @@
     }
 
     h2 {
-      font-size: 2.5em;
+      font-size: 2em;
       color: white;
       margin-bottom: 20px;
     }
 
     .overview {
-      background-color: rgba(255, 255, 255, 0.8); /* Light background with opacity */
+      background-color: rgba(255, 255, 255, 0.9);
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -98,10 +98,10 @@
     .slideshow-container {
       position: relative;
       width: 100%;
-      height: 60vh;
+      height: 50vh;
       overflow: hidden;
       margin-bottom: 40px;
-      background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+      background-color: rgba(0, 0, 0, 0.6);
     }
 
     .slides {
@@ -113,8 +113,7 @@
     .slides img {
       width: 100%;
       height: 100%;
-      object-fit: cover; 
-      opacity: 1;
+      object-fit: cover;
     }
 
     /* Arrow Navigation */
@@ -175,10 +174,11 @@
     }
 
     .itinerary-card {
-      background-color: rgba(255, 255, 255, 0.8); /* Light overlay */
+      background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
       padding: 20px;
-      width: 280px;
+      width: 100%;
+      max-width: 280px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
     }
@@ -193,6 +193,45 @@
       color: black;
     }
 
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero {
+        font-size: 1.5em;
+        height: 40vh;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      .itinerary-card h3 {
+        font-size: 1.5em;
+      }
+
+      .arrow {
+        font-size: 20px;
+      }
+
+      .dot {
+        height: 10px;
+        width: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        font-size: 1.2em;
+        padding: 40px 10px;
+      }
+
+      .itinerary-card {
+        padding: 15px;
+      }
+
+      .place-card {
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -205,12 +244,12 @@
   <!-- Slideshow Section -->
   <div class="slideshow-container">
     <div class="slides">
-      <img src="IMAGES/tokyo-image1.avif" alt="Tokyo Tower">
-      <img src="IMAGES/tokyo-image2.avif" alt="Shibuya Crossing">
-      <img src="IMAGES/tokyo-image3.avif" alt="Senso-ji Temple">
-      <img src="IMAGES/tokyo-image4.avif" alt="Cherry Blossoms in Tokyo">
-      <img src="IMAGES/tokyo-image5.avif" alt="Meiji Shrine">
-      <img src="IMAGES/tokyo-image6.avif" alt="Tokyo Skytree">
+      <img src="../IMAGES/tokyo-image1.avif" alt="Tokyo Tower">
+      <img src="../IMAGES/tokyo-image2.avif" alt="Shibuya Crossing">
+      <img src="../IMAGES/tokyo-image3.avif" alt="Senso-ji Temple">
+      <img src="../IMAGES/tokyo-image4.avif" alt="Cherry Blossoms in Tokyo">
+      <img src="../IMAGES/tokyo-image5.avif" alt="Meiji Shrine">
+      <img src="../IMAGES/tokyo-image6.avif" alt="Tokyo Skytree">
     </div>
     <!-- Navigation Arrows -->
     <span class="arrow arrow-left" onclick="prevSlide()">&lt;</span>
@@ -265,11 +304,8 @@
     const totalSlides = slides.length;
 
     function showSlide(index) {
-      // Move the slides container to show the desired image
-      const offset = -index * 100;  // Move the slides by 100% width for each slide
+      const offset = -index * 100;
       slidesContainer.style.transform = `translateX(${offset}%)`;
-
-      // Update active dot
       dots.forEach((dot, i) => {
         dot.classList.remove('active');
         if (i === index) {
@@ -293,19 +329,15 @@
       showSlide(currentSlideIndex);
     }
 
-    // Auto slideshow (every 3 seconds)
     setInterval(nextSlide, 3000);
 
-    // Arrow navigation
     document.querySelector('.arrow-left').addEventListener('click', prevSlide);
     document.querySelector('.arrow-right').addEventListener('click', nextSlide);
 
-    // Dot navigation
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => goToSlide(i));
     });
 
-    // Initial slide display
     showSlide(currentSlideIndex);
   </script>
 </body>

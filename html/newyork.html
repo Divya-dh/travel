@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Destination Guide - New York</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      background-image: url("IMAGES/newyork.avif");
+      background-image: url("../IMAGES/newyork.avif");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -20,7 +20,7 @@
 
     /* Hero Section */
     .hero {
-      background-image: url("IMAGES/newyork.avif");
+      background-image: url("../IMAGES/newyork.avif");
       background-size: cover;
       background-position: center;
       height: 60vh;
@@ -193,6 +193,31 @@
       color: black;
     }
 
+    /* Mobile Responsive */
+    @media screen and (max-width: 768px) {
+      .hero {
+        height: 50vh;
+        font-size: 2em;
+        padding: 30px 20px;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      .itinerary-card {
+        width: 90%;
+        margin: 10px 0;
+      }
+
+      .places-to-visit-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .dot-container {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -205,12 +230,12 @@
   <!-- Slideshow Section -->
   <div class="slideshow-container">
     <div class="slides">
-      <img src="IMAGES/newyork-image1.avif" alt="Statue of Liberty">
-      <img src="IMAGES/newyork-image2.avif" alt="Times Square">
-      <img src="IMAGES/newyork-image3.avif" alt="Central Park">
-      <img src="IMAGES/newyork-image4.avif" alt="Empire State Building">
-      <img src="IMAGES/newyork-image5.avif" alt="Brooklyn Bridge">
-      <img src="IMAGES/newyork-image6.avif" alt="Metropolitan Museum of Art">
+      <img src="../IMAGES/newyork-image1.avif" alt="Statue of Liberty">
+      <img src="../IMAGES/newyork-image2.avif" alt="Times Square">
+      <img src="../IMAGES/newyork-image3.avif" alt="Central Park">
+      <img src="../IMAGES/newyork-image4.avif" alt="Empire State Building">
+      <img src="../IMAGES/newyork-image5.avif" alt="Brooklyn Bridge">
+      <img src="../IMAGES/newyork-image6.avif" alt="Metropolitan Museum of Art">
     </div>
     <!-- Navigation Arrows -->
     <span class="arrow arrow-left" onclick="prevSlide()">&lt;</span>

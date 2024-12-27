@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      background-image: url("IMAGES/bali.avif"); 
+      background-image: url("../IMAGES/bali.avif"); 
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -185,6 +185,68 @@
       margin: 10px 0;
       color: black;
     }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .hero {
+        height: 50vh;
+        font-size: 2em;
+        padding: 40px 20px;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      .overview {
+        font-size: 1em;
+        padding: 15px;
+      }
+
+      .places-to-visit-container {
+        grid-template-columns: 1fr;
+      }
+
+      .place-card img {
+        height: 150px;
+      }
+
+      .itinerary-card {
+        width: 100%;
+      }
+
+      .dot-container {
+        bottom: 5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        height: 40vh;
+        font-size: 1.8em;
+        padding: 30px 15px;
+      }
+
+      h2 {
+        font-size: 1.8em;
+      }
+
+      .overview {
+        font-size: 0.9em;
+        padding: 10px;
+      }
+
+      .itinerary-card {
+        width: 100%;
+        padding: 15px;
+      }
+
+      .dot {
+        height: 10px;
+        width: 10px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -195,12 +257,12 @@
 
   <div class="slideshow-container">
     <div class="slides">
-      <img src="IMAGES/bali-image1.avif" alt="Lovina-Black Sand Beach">
-      <img src="IMAGES/bali-image2.avif" alt="Sidemen's Valley">
-      <img src="IMAGES/bali-image3.avif" alt="Sekumpul Waterfall">
-      <img src="IMAGES/bali-image4.avif" alt="Campuhan Ridge">
-      <img src="IMAGES/bali-image5.avif" alt="Goa Gajah Temple">
-      <img src="IMAGES/bali-image6.avif" alt="Pura Luhur Uluwatu">
+      <img src="../IMAGES/bali-image1.avif" alt="Lovina-Black Sand Beach">
+      <img src="../IMAGES/bali-image2.avif" alt="Sidemen's Valley">
+      <img src="../IMAGES/bali-image3.avif" alt="Sekumpul Waterfall">
+      <img src="../IMAGES/bali-image4.avif" alt="Campuhan Ridge">
+      <img src="../IMAGES/bali-image5.avif" alt="Goa Gajah Temple">
+      <img src="../IMAGES/bali-image6.avif" alt="Pura Luhur Uluwatu">
     </div>
     <span class="arrow arrow-left" onclick="prevSlide()">&lt;</span>
     <span class="arrow arrow-right" onclick="nextSlide()">&gt;</span>
