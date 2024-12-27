@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destination Guide - Rome</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background-image: url("IMAGES/rome.avif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: scroll;
+      font-family: Arial, sans-serif;
+      color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url("IMAGES/rome.avif");
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 2.5em;
+      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text visibility */
+    }
+
+    /* Main Content */
+    .content {
+      padding: 80px 20px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .overview {
+      background-color: rgba(255, 255, 255, 0.8); /* Light background with opacity */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 50px;
+    }
+
+    /* Places to Visit Grid */
+    .places-to-visit-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .place-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .place-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .place-card img {
+      width: 100%;
+      border-radius: 8px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .place-card a {
+      display: block;
+      font-size: 1.2em;
+      color: #333;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .place-card a:hover {
+      color: #ff6f61;
+    }
+
+    /* Slideshow Section */
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      overflow: hidden;
+      margin-bottom: 40px;
+      background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      width: 100%;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      opacity: 1;
+    }
+
+    /* Arrow Navigation */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    /* Dot Navigation */
+    .dot-container {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+    }
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: #fff;
+    }
+
+    .dot:hover {
+      background-color: #ddd;
+    }
+
+    /* Suggested Itinerary Section */
+    .itinerary-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .itinerary-card {
+      background-color: rgba(255, 255, 255, 0.8); /* Light overlay */
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .itinerary-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .itinerary-card h3 {
+      font-size: 1.8em;
+      margin: 10px 0;
+      color: black;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero {
+        font-size: 1.8em;
+        padding: 40px 10px;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      .itinerary-card {
+        width: 100%;
+      }
+
+      .places-to-visit-container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      }
+
+      .slideshow-container {
+        height: 40vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Rome</h1>
+    <p>Explore the timeless history and beauty of the Eternal City.</p>
+  </div>
+
+  <!-- Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slides">
+      <img src="IMAGES/rome-image1.avif" alt="Colosseum">
+      <img src="IMAGES/rome-image2.avif" alt="Vatican City">
+      <img src="IMAGES/rome-image3.avif" alt="Roman Forum">
+      <img src="IMAGES/rome-image4.avif" alt="Pantheon">
+      <img src="IMAGES/rome-image5.avif" alt="Trevi Fountain">
+      <img src="IMAGES/rome-image6.avif" alt="Piazza Navona">
+    </div>
+    <!-- Navigation Arrows -->
+    <span class="arrow arrow-left" onclick="prevSlide()">&lt;</span>
+    <span class="arrow arrow-right" onclick="nextSlide()">&gt;</span>
+
+    <!-- Dot Navigation -->
+    <div class="dot-container">
+      <span class="dot" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+      <span class="dot" onclick="goToSlide(3)"></span>
+      <span class="dot" onclick="goToSlide(4)"></span>
+      <span class="dot" onclick="goToSlide(5)"></span>
+    </div>
+  </div>
+
+  <!-- Overview Section -->
+  <div class="content">
+    <div class="section">
+      <h2>About Rome</h2>
+      <div class="overview">
+        <p><center>Rome, the capital city of Italy, is a place where history and modern life converge. Known for its ancient monuments, rich culture, and vibrant street life, Rome offers travelers an unforgettable experience full of art, food, and history.</center></p>
+      </div>
+    </div>
+
+    <!-- Suggested Travel Itinerary Section -->
+    <div class="section">
+      <h2>Suggested Travel Itineraries</h2>
+      <div class="itinerary-container">
+        <div class="itinerary-card">
+          <h3>3-Day Itinerary</h3>
+          <p>Day 1: Colosseum, Roman Forum</p>
+          <p>Day 2: Vatican Museums, St. Peter's Basilica</p>
+          <p>Day 3: Pantheon, Trevi Fountain, Piazza Navona</p>
+        </div>
+        <div class="itinerary-card">
+          <h3>1-Week Itinerary</h3>
+          <p>Day 1-2: Colosseum, Roman Forum, Palatine Hill</p>
+          <p>Day 3-4: Vatican City, Castel Sant'Angelo, Piazza del Popolo</p>
+          <p>Day 5-7: Pantheon, Trevi Fountain, Spanish Steps, Tivoli Gardens</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for Slideshow -->
+  <script>
+    let currentSlideIndex = 0;
+    const slidesContainer = document.querySelector('.slides');
+    const slides = document.querySelectorAll('.slides img');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      // Move the slides container to show the desired image
+      const offset = -index * 100;  // Move the slides by 100% width for each slide
+      slidesContainer.style.transform = `translateX(${offset}%)`;
+
+      // Update active dot
+      dots.forEach((dot, i) => {
+        dot.classList.remove('active');
+        if (i === index) {
+          dot.classList.add('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+      showSlide(currentSlideIndex);
+    }
+
+    function prevSlide() {
+      currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlideIndex);
+    }
+
+    function goToSlide(index) {
+      currentSlideIndex = index;
+      showSlide(currentSlideIndex);
+    }
+
+    // Auto slideshow (every 3 seconds)
+    setInterval(nextSlide, 3000);
+
+    // Arrow navigation
+    document.querySelector('.arrow-left').addEventListener('click', prevSlide);
+    document.querySelector('.arrow-right').addEventListener('click', nextSlide);
+
+    // Dot navigation
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => goToSlide(i));
+    });
+
+    // Initial slide display
+    showSlide(currentSlideIndex);
+  </script>
+</body>
+</html>
+
